@@ -26,8 +26,8 @@ AndroidAccessory acc("GTUGBH",
  *
  * 0x01: botoes pressionados ou liberados (output)
  * 0x02: coin inserted (output)
- * 0x03: score changed (input)
- * 0x04: high score changed (input)
+ * 0x03: high score (input)
+ * 0x04: score changed (input)
  * 0x05: rgb color (input) //ainda precisa ver como fica isso
  *
 */
@@ -93,7 +93,27 @@ void setup()
 
 void loop()
 {
-  acc.isConnected();
+  byte msg[4];
+
+  if (acc.isConnected()) {
+    int len = acc.read(msg, sizeof(msg), 1);
+    if (len > 0) {
+      switch(msg[0]) {
+        case 0x3:
+          Serial.println("HIGH SCORE");
+          break;
+        case 0x4:
+          Serial.println("SCORE CHANGED");
+          break;
+        case 0x5:
+          Serial.println("COLOR CHANGED");
+          break;
+        default:
+          Serial.println("COMMAND ERROR.");
+      }
+    }
+  }
+  
   verify_coin();
   verify_buttons();
   
