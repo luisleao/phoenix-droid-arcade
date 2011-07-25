@@ -1,0 +1,6 @@
+PHOENIX DROID ARCADE
+
+Projeto do GTUG-BH (http://bh.gtugs.org) de demonstração do Android Open Acessory Development Kit (ADK).
+
+
+Construção de um mini-gabinete de fliperama para o emulador do video game Phoenix. A comunicação do acessório para o telefone será usada para enviar os comandos de joystick, botões e inserção de fichas / moedas (haverá um slot adequado). Como exemplo da comunicação no sentido telefone-acessório exibiremos o high-score em um display de 7-segmentos, controlado através de comunicação serial.
