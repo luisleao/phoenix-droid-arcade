@@ -4,13 +4,23 @@
 #include <AndroidAccessory.h>
 
 
+#define BUTTONS 6
+
 #define BUTTON_1         2
 #define BUTTON_2         3
 #define BUTTON_S         4
 #define BUTTON_E         5
 #define BUTTON_N         6
 #define BUTTON_W         7
-#define BUTTON_COIN      8
+#define BUTTON_COIN      22
+
+#define RGB_R            9
+#define RGB_G            10
+#define RGB_B            11
+
+#define COR_VERDE 200
+#define COR_AZUL 160
+
 
 
 AndroidAccessory acc("GTUGBH",
@@ -35,9 +45,9 @@ AndroidAccessory acc("GTUGBH",
 /*
  * TODOs:
  *
- * - mudar pinos
+ * OK  - mudar pinos
  * - receber scores e alterar display
- * - incluir tira de leds RGB
+ * OK  - incluir tira de leds RGB
  * OK - simplificar o codigo
  *
 */
@@ -45,20 +55,27 @@ AndroidAccessory acc("GTUGBH",
 
 
 
-#define BUTTONS 6
 
 int buttons[] = {BUTTON_N, BUTTON_S, BUTTON_W, BUTTON_E, BUTTON_1, BUTTON_2};
 String button_names[] = {"UP", "DOWN", "LEFT", "RIGHT", "SHIELD", "FIRE"};
 byte button_states[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
+unsigned int rgb[] = {0, 0, 0};
+int cor = COR_VERDE; //160; //padrao azul
+
 byte bCoin;
+boolean is_connected = false;
 
 
 void setup();
 void loop();
+
 void init_coin();
 void init_buttons();
+void init_rgb();
+void init_display();
 
+void change_color();
 void verify_coin();
 void verify_buttons();
 
@@ -78,6 +95,23 @@ void init_buttons()
   }
 }
 
+void init_rgb() {
+
+  pinMode(RGB_R, OUTPUT);
+  pinMode(RGB_G, OUTPUT);
+  pinMode(RGB_B, OUTPUT);
+
+  digitalWrite(RGB_R, HIGH);
+  digitalWrite(RGB_G, HIGH);
+  digitalWrite(RGB_B, HIGH);
+
+}
+
+void init_display() 
+{
+  Serial1.begin(19200);
+}
+
 
 void setup()
 {
@@ -86,6 +120,8 @@ void setup()
   
   init_coin();
   init_buttons();
+  init_rgb();
+  init_display();
   
   acc.powerOn();
   Serial.println("ADK INITIALIZED.");
@@ -93,9 +129,19 @@ void setup()
 
 void loop()
 {
+  
+  if (is_connected != acc.isConnected()) {
+    is_connected = acc.isConnected();
+    if (is_connected)
+      cor = COR_VERDE;
+    
+  }
+  
+  
+  //TODO: receber dados 0x03, 0x04, 0x05
   byte msg[4];
 
-  if (acc.isConnected()) {
+  if (is_connected) {
     int len = acc.read(msg, sizeof(msg), 1);
     if (len > 0) {
       switch(msg[0]) {
@@ -116,10 +162,38 @@ void loop()
   
   verify_coin();
   verify_buttons();
+  change_color();
   
-  //TODO: receber dados 0x03, 0x04, 0x05
   delay(10);
 }
+
+
+void change_color() {
+  
+  
+  HSBToRGB(cor, 255, 255, &rgb[0], &rgb[1], &rgb[2]); 
+
+  unsigned int r = rgb[0];
+  unsigned int g = rgb[1];
+  unsigned int b = rgb[2];
+
+  analogWrite(RGB_R, 255-r);
+  analogWrite(RGB_G, 255-g);
+  analogWrite(RGB_B, 255-b);
+  
+  //Serial.print("COR\t");
+  //Serial.print(r); Serial.print("\t");
+  //Serial.print(g); Serial.print("\t");
+  //Serial.print(b); Serial.print("\t");
+  //Serial.println();
+  
+  if (!is_connected) {
+    cor++;
+    if (cor>255) cor=0;
+  }
+
+}
+
 
 
 
@@ -149,9 +223,8 @@ void verify_buttons() {
 }
 
 
-
 void send_coin_message() {
-  if (!acc.isConnected())
+  if (!is_connected)
     return;
   
   byte msg[1] = {0x2};
@@ -159,7 +232,7 @@ void send_coin_message() {
 }
 
 void send_button_message(byte button_number, byte button_message) {
-  if (!acc.isConnected())
+  if (!is_connected)
     return;
   
   byte msg[3] = {0x1, button_number, button_message};
@@ -169,4 +242,37 @@ void send_button_message(byte button_number, byte button_message) {
   acc.write(msg, 3);
 }
 
+
+
+
+
+void HSBToRGB( unsigned int inHue, unsigned int inSaturation, unsigned int inBrightness, unsigned int *oR, unsigned int *oG, unsigned int *oB )
+{
+  if( inSaturation == 0 ) {
+    // achromatic (grey)
+    *oR = *oG = *oB = inBrightness;
+  } else {
+    unsigned int scaledHue = (inHue * 6);
+    unsigned int sector = scaledHue >> 8; // sector 0 to 5 around the color wheel
+    unsigned int offsetInSector = scaledHue - (sector << 8);	// position within the sector
+    unsigned int p = (inBrightness * ( 255 - inSaturation )) >> 8;
+    unsigned int q = (inBrightness * ( 255 - ((inSaturation * offsetInSector) >> 8) )) >> 8;
+    unsigned int t = (inBrightness * ( 255 - ((inSaturation * ( 255 - offsetInSector )) >> 8) )) >> 8;
+ 
+    switch( sector ) {
+    case 0:
+      *oR = inBrightness; *oG = t; *oB = p; break;
+    case 1:
+      *oR = q; *oG = inBrightness; *oB = p; break;
+    case 2:
+      *oR = p; *oG = inBrightness; *oB = t; break;
+    case 3:
+      *oR = p; *oG = q; *oB = inBrightness; break;
+    case 4:
+      *oR = t; *oG = p; *oB = inBrightness; break;
+    default:		// case 5:
+      *oR = inBrightness; *oG = p; *oB = q; break;
+    }
+  }
+}
 
