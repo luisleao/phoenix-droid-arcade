@@ -12,16 +12,26 @@
 #define BUTTON_E         5
 #define BUTTON_N         6
 #define BUTTON_W         7
-#define BUTTON_COIN      22
+#define BUTTON_COIN      30
 
 #define RGB_R            9
 #define RGB_G            10
 #define RGB_B            11
 
 #define COR_VERDE 200
-#define COR_AZUL 160
+#define COR_AZUL 40
 
 
+
+//TODO: comandos dos displays
+#define INICIALIZA_COMANDO "@"
+#define DESLIGA_DISPLAYS "D"
+#define LIGA_DISPLAYS "L"
+#define ZERA_DISPLAYS "Z"
+#define ATUALIZA_DISPLAY_A "A"
+#define ATUALIZA_DISPLAY_B "B"
+
+//String INICIALIZA_COMANDO = "@";
 
 AndroidAccessory acc("GTUGBH",
 		     "PhoenixArcade",
@@ -36,8 +46,11 @@ AndroidAccessory acc("GTUGBH",
  *
  * 0x01: botoes pressionados ou liberados (output)
  * 0x02: coin inserted (output)
- * 0x03: high score (input)
- * 0x04: score changed (input)
+ 
+ * 0x00: high score (input)
+ * 0x01: score player one (input)
+ * 0x02: score player two (input)
+
  * 0x05: rgb color (input) //ainda precisa ver como fica isso
  *
 */
@@ -55,9 +68,28 @@ AndroidAccessory acc("GTUGBH",
 
 
 
+#define BUTTON_1       2
+#define BUTTON_2       3
+#define BUTTON_DOWN    4
+#define BUTTON_LEFT    5
+#define BUTTON_UP      6
+#define BUTTON_RIGHT   7
 
-int buttons[] = {BUTTON_N, BUTTON_S, BUTTON_W, BUTTON_E, BUTTON_1, BUTTON_2};
-String button_names[] = {"UP", "DOWN", "LEFT", "RIGHT", "SHIELD", "FIRE"};
+
+/*
+fire 0
+shield 1
+
+down 2
+left 3
+up 4
+right 5
+
+*/
+
+
+int buttons[] = {BUTTON_1, BUTTON_2, BUTTON_DOWN, BUTTON_LEFT, BUTTON_UP, BUTTON_RIGHT};
+String button_names[] = {"FIRE", "SHIELD", "DOWN", "LEFT", "UP", "RIGHT"};
 byte button_states[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
 unsigned int rgb[] = {0, 0, 0};
@@ -118,6 +150,10 @@ void setup()
   Serial.begin(115200);
   Serial.println("\r\nPhoenix Arcade by GTUG-BH");
   
+  Serial1.begin(19200);
+  Serial1.write(INICIALIZA_COMANDO);
+  Serial1.write(DESLIGA_DISPLAYS);
+
   init_coin();
   init_buttons();
   init_rgb();
@@ -130,12 +166,28 @@ void setup()
 void loop()
 {
   
+  Serial1.write(INICIALIZA_COMANDO);
+  Serial1.write(ATUALIZA_DISPLAY_A);
+  Serial1.write(0x22);
+  Serial1.write(0x33);
+  Serial1.write(0x44);
+  Serial1.write(0x55);
+
+  
   if (is_connected != acc.isConnected()) {
     is_connected = acc.isConnected();
-    if (is_connected)
-      cor = COR_VERDE;
-    
+    if (is_connected) {
+      //cor = COR_VERDE;
+      Serial1.write(INICIALIZA_COMANDO);
+      Serial1.write(ZERA_DISPLAYS);
+      Serial1.write(LIGA_DISPLAYS);
+
+    } else {
+      Serial1.write(INICIALIZA_COMANDO);
+      Serial1.write(DESLIGA_DISPLAYS);
+    }
   }
+  change_color();
   
   
   //TODO: receber dados 0x03, 0x04, 0x05
@@ -145,24 +197,55 @@ void loop()
     int len = acc.read(msg, sizeof(msg), 1);
     if (len > 0) {
       switch(msg[0]) {
-        case 0x3:
+        case 0x00: //HIGH SCORE
           Serial.println("HIGH SCORE");
+          Serial1.write(INICIALIZA_COMANDO);
+          Serial1.write(ATUALIZA_DISPLAY_A);
+          Serial1.write(msg[1]);
+          Serial1.write(msg[2]);
+          Serial1.write(msg[3]);
+          Serial1.write(msg[4]);
+          
           break;
-        case 0x4:
-          Serial.println("SCORE CHANGED");
+
+        case 0x01: //PLAYER ONE
+          Serial.println("SCORE PLAYER ONE");
+          
+          Serial1.write(INICIALIZA_COMANDO);
+          Serial1.write(ATUALIZA_DISPLAY_B);
+          Serial1.write(msg[1]);
+          Serial1.write(msg[2]);
+          Serial1.write(msg[3]);
+          Serial1.write(msg[4]);
           break;
+
+        case 0x02: //PLAYER_TWO
+          Serial.println("HIGH SCORE");
+
+          Serial1.write(INICIALIZA_COMANDO);
+          Serial1.write(ATUALIZA_DISPLAY_B);
+          Serial1.write(msg[1]);
+          Serial1.write(msg[2]);
+          Serial1.write(msg[3]);
+          Serial1.write(msg[4]);
+          break;
+          
         case 0x5:
           Serial.println("COLOR CHANGED");
           break;
+
         default:
           Serial.println("COMMAND ERROR.");
       }
     }
+  } else {
   }
+
+  cor++;
+  if (cor>255) cor=0;
   
   verify_coin();
   verify_buttons();
-  change_color();
   
   delay(10);
 }
@@ -182,15 +265,11 @@ void change_color() {
   analogWrite(RGB_B, 255-b);
   
   //Serial.print("COR\t");
+  //Serial.print(cor); Serial.print("\t");
   //Serial.print(r); Serial.print("\t");
   //Serial.print(g); Serial.print("\t");
   //Serial.print(b); Serial.print("\t");
   //Serial.println();
-  
-  if (!is_connected) {
-    cor++;
-    if (cor>255) cor=0;
-  }
 
 }
 
@@ -203,8 +282,13 @@ void verify_coin() {
   if (b != bCoin) {
     bCoin = b;
     if (!bCoin) {
-      Serial.print("COIN INSERTED");
+      Serial.println("COIN INSERTED");
       send_coin_message();
+      
+      cor = COR_AZUL;
+      change_color();
+      is_connected = false; //força troca de cor
+      //delay(500);
     }
   }
 }
