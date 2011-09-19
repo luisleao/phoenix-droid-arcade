@@ -1,0 +1,6 @@
+_init: CODE, 776 0 13
+_main: CODE, 468 0 218
+_initTMR2: CODE, 763 0 13
+_initUART: CODE, 720 0 24
+_isr: CODE, 21 0 447
+Total: 715

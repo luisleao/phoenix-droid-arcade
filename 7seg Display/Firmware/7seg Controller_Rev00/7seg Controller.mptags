@@ -1,0 +1,57 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+BRGVALU1::7	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	20;"	d	line:20
+BUFFER_SIZE::6	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	22;"	d	line:22
+CP_OFF	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg_Rev00.c	24;"	v	line:24
+colA0::RB6	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	45;"	d	line:45
+colA1::RC0	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	46;"	d	line:46
+colA2::RB4	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	47;"	d	line:47
+colA3::RB3	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	48;"	d	line:48
+colA4::RB2	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	49;"	d	line:49
+colA5::RB1	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	50;"	d	line:50
+colB0::RB0	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	53;"	d	line:53
+colB1::RC5	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	54;"	d	line:54
+colB2::RC4	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	55;"	d	line:55
+colB3::RC3	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	56;"	d	line:56
+colB4::RC2	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	57;"	d	line:57
+colB5::RC1	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	58;"	d	line:58
+display	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.c	24;"	v	line:24
+i	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg_Rev00.c	83;"	l	line:83
+init	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Routines_Rev00.c	23;"	f	line:23	signature:(void)
+init	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Routines_Rev00.h	20;"	p	line:20	signature:(void)
+initTMR2	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Routines_Rev00.c	78;"	f	line:78	signature:(void)
+initTMR2	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Routines_Rev00.h	22;"	p	line:22	signature:(void)
+initUART	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Routines_Rev00.c	48;"	f	line:48	signature:(void)
+initUART	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Routines_Rev00.h	21;"	p	line:21	signature:(void)
+isr	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Interrupts_Rev00.c	24;"	f	line:24	signature:(void)
+isr	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Interrupts_Rev00.h	21;"	p	line:21	signature:(void)
+main	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg_Rev00.c	31;"	f	line:31	signature:(void)
+main	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg_Rev00.h	22;"	p	line:22	signature:(void)
+rx	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.c	20;"	v	line:20
+rxCount	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.c	20;"	v	line:20
+rxOld	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg_Rev00.c	34;"	l	line:34	file:
+scoreA0	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.c	23;"	v	line:23
+scoreA1	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.c	23;"	v	line:23
+scoreA2	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.c	23;"	v	line:23
+scoreA3	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.c	23;"	v	line:23
+scoreB0	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.c	23;"	v	line:23
+scoreB1	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.c	23;"	v	line:23
+scoreB2	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.c	23;"	v	line:23
+scoreB3	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.c	23;"	v	line:23
+segA::RA0	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	34;"	d	line:34
+segB::RA1	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	35;"	d	line:35
+segC::RA2	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	36;"	d	line:36
+segD::RA3	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	37;"	d	line:37
+segE::RB7	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	38;"	d	line:38
+segF::RA5	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	39;"	d	line:39
+segG::RB5	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.h	40;"	d	line:40
+string	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg_Rev00.c	82;"	l	line:82
+temp	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Interrupts_Rev00.c	30;"	l	line:30
+temp	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Interrupts_Rev00.c	57;"	l	line:57
+teste	D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg_Rev00.c	81;"	l	line:81

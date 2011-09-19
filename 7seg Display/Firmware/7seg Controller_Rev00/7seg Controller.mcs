@@ -1,0 +1,224 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg_Rev00.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File001]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Definitions_Rev00.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File002]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Interrupts_Rev00.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File003]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\Routines_Rev00.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File004]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg Controller.cof
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File005]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg Controller.hex
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File006]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg Controller.sym
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File007]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg Controller.map
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File008]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg Controller.hxl
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File009]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\startup.lst
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File010]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\startup.rlf
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File011]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\doprnt.p1
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File012]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\doprnt.pre
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File013]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg Controller.obj
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File014]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg Controller.lst
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File015]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg Controller.rlf
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File016]
+Location=D:\Dropbox\PhoenixArcade\Arduino\PIC\Desenvolvimento\7seg Controller_Rev00\7seg Controller.sdb
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|7seg_Rev00.c|Definitions_Rev00.c|Interrupts_Rev00.c|Routines_Rev00.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
