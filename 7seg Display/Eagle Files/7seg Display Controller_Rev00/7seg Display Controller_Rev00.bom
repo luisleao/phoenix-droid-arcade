@@ -1,0 +1,18 @@
+Partlist exported from D:/Dropbox/PhoenixArcade/Arduino/Eagle/7seg Display Controller_Rev00/7seg Display Controller_Rev00.sch at 06/08/2011 01:13:22
+
+Qty Value     Device                 Parts                                                   
+12            BC817-16-NPN-SOT23-BEC T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12       
+1             PINHD-1X2              JP6                                                     
+1             PINHD-1X6              JP5                                                     
+4             PINHD-1X8              JP1, JP2, JP3, JP4                                      
+1   1uF       C-USC0805              C5                                                      
+1   5K1       R-US_R0805             R7                                                      
+1   10K       R-US_R0805             R1                                                      
+2   18pF      C-USC0805              C1, C2                                                  
+1   20MHz     CRYSTALHC49S           Q1                                                      
+3   100R      R-US_R0805             R2, R3, R4                                              
+2   100nF     C-USC0805              C3, C4                                                  
+12  150R      R-US_R0805             R5, R8, R10, R12, R14, R16, R18, R20, R22, R24, R26, R28
+12  470R      R-US_R0805             R6, R9, R11, R13, R15, R17, R19, R21, R23, R25, R27, R29
+1   7805TV    7805TV                 IC2                                                     
+1   PIC16876P PIC16876P              IC1                                                     
